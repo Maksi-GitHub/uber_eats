@@ -16,6 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_animator: ^3.2.2
   flutter_svg: 2.0.10+1
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -30,8 +31,9 @@ flutter:
 
   uses-material-design: true
 
-assets:
-  - assets/images/
+  assets:
+    - assets/images/
+    - assets/jpg/
 
 
   # example:

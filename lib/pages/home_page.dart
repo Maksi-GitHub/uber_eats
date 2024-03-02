@@ -3,8 +3,9 @@ import 'package:flutter_animator/flutter_animator.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:uber_eats/json/home_page_json.dart';
-//;
+import 'package:uber_eats/theme/color.dart';
 import 'package:uber_eats/theme/styles.dart';
+import 'package:uber_eats/widget/custom_slider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});
@@ -44,11 +45,10 @@ class _HomePageState extends State<HomePage> {
                           activeMenu = index;
                         });
                       },
-                      //TODO: подобрать анимацию, использовал другой пакет(такой как в видео не работал)
                       child: activeMenu == index ? Jello(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.black,
+                            color: black,
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Padding(padding: const EdgeInsets.only(
@@ -62,8 +62,7 @@ class _HomePageState extends State<HomePage> {
                                 Text(menu[index], style: const TextStyle (
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
-                                  //TODO: нужно чтобы был цвет из файла Colors.dart, но появляется ошибка
-                                  color: Colors.white,
+                                  color: white,
                                 ),)
                               ],
                             ),
@@ -72,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                       )
                       :Container(
                           decoration: BoxDecoration(
-                            color: Colors.black,
+                            color: Colors.transparent,
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Padding(padding: const EdgeInsets.only(
@@ -86,13 +85,11 @@ class _HomePageState extends State<HomePage> {
                                 Text(menu[index], style: const TextStyle (
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
-                                  //TODO: нужно чтобы был цвет из файла Colors.dart, но появляется ошибка
-                                  color: Colors.white,
+                                  color: black,
                                 ),)
                               ],
                             ),
                           ),
-                          
                         ),
                     ),
                   );
@@ -108,8 +105,7 @@ class _HomePageState extends State<HomePage> {
                     height: 45,
                     width: size.width - 70,
                     decoration: BoxDecoration(
-                      //TODO: нужно чтобы был цвет из файла Colors.dart textFieldColor, но появляется ошибка 
-                      color: Colors.red, 
+                      color: textFieldColor, 
                       borderRadius: BorderRadius.circular(30)
                     ),
                     child: Row(
@@ -135,17 +131,22 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(30)
                           ),
-                          child: Padding(padding:const EdgeInsets.only(left: 15, right: 15),
+                          child: Padding(padding:const EdgeInsets.only(
+                            left: 15, 
+                            right: 15
+                            ),
                           child: Row(
                             children: [
                               SvgPicture.asset("assets/images/time_icon.svg",
                               width: 20,
                               ),
                               const SizedBox(width: 8),
-                              const Text("Now", 
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              const Text("Now", style: TextStyle(
+                                fontSize: 16, 
+                                fontWeight: FontWeight.bold
+                                ),
                               ),
-                              const SizedBox(width: 2,),
+                              const SizedBox(width: 2),
                               const Icon(Icons.keyboard_arrow_down)
                             ],
                           ),
@@ -154,9 +155,20 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                  )
+                  ),
+                  Expanded(child: Container(
+                    child: SvgPicture. asset("assets/images/filter_icon.svg"),
+                  ),
+                 )
                 ],
+              ),
+              const SizedBox(height: 15),
+              const CustomSliderWidget(
+                items: [
+                  //"assets/images/slid_1.jpg"
+                ]
               )
+
           ],
         )
       ],
