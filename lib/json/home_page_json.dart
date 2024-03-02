@@ -5,13 +5,13 @@ const List peopleFeedback = [
   "Follow order notes (11)"
 ];
 const List categories = [
-  {"img": "assets/images/pickup.svg", "name": "Pickup"},
-  {"img": "assets/images/groceries.svg", "name": "Grocery"},
-  {"img": "assets/images/essentials.svg", "name": "Essentials"},
-  {"img": "assets/images/fruit.svg", "name": "Fruit"},
-  {"img": "assets/images/alcohols.svg", "name": "Alcohol"},
-  {"img": "assets/images/deals.svg", "name": "Deals"},
-  {"img": "assets/images/discount.svg", "name": "Discount"},
+  {"img": "assets/icons/pickup.svg", "name": "Pickup"},
+  {"img": "assets/icons/groceries.svg", "name": "Grocery"},
+  {"img": "assets/icons/essentials.svg", "name": "Essentials"},
+  {"img": "assets/icons/fruit.svg", "name": "Fruit"},
+  {"img": "assets/icons/alcohols.svg", "name": "Alcohol"},
+  {"img": "assets/icons/deals.svg", "name": "Deals"},
+  {"img": "assets/icons/discount.svg", "name": "Discount"},
 ];
 const List firstMenu = [
   {

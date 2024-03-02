@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 15,
+              height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -169,8 +169,78 @@ class _HomePageState extends State<HomePage> {
                   "assets/images/slide_2.jpg",
                   "assets/images/slide_3.jpg"
                 ]
-              )
-
+              ),
+              Container(
+                width: size.width,
+                decoration: BoxDecoration(
+                  color: textFieldColor),
+                  child: Padding(padding: const EdgeInsets.only(bottom: 10, top: 10),
+                  child: Container(
+                    decoration: const BoxDecoration(color: white),
+                    child: Padding(padding: const EdgeInsets.only(
+                      top: 15, 
+                      bottom: 15),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Container(
+                          margin: const EdgeInsets.only(left: 30),
+                          child: Row(
+                            children: List.generate(categories.length, (index) {
+                              return Padding(
+                                padding: const EdgeInsets.only(right: 30),
+                                child: Column(
+                                  children: [
+                                    SvgPicture.asset(categories[index]['img'],
+                                    width: 40,
+                                    ),
+                                    const SizedBox(height: 15),
+                                    Text(categories[index]['name'],
+                                    style: customContetnt,
+                                    )
+                                  ],
+                                ),
+                              );
+                            })
+                          ),
+                        ),
+                      ),
+                      ),
+                  ),
+                )
+            ),
+            SizedBox(height: 15,),
+            Container(
+              width: size.width,
+              child: Padding(padding: EdgeInsets.only(left:15, right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      Container(
+                        width: size.width,
+                        height: 160,
+                        child: Image(image: NetworkImage(firstMenu[0]['img']),fit: BoxFit.cover,),
+                      ),
+                      Positioned(
+                        bottom: 15,
+                        right: 15,
+                        child: SvgPicture.asset(firstMenu[0]['is_liked'] ? 
+                        "assets/icons/loved_icon.svg" : "assets/icons/love_icon.svg",
+                        width: 20,
+                        color: white,),
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 15),
+                  Text(firstMenu[0]['name'], 
+                  style: const TextStyle(fontSize: 16, 
+                  fontWeight:FontWeight.w400
+                  ),),
+                  
+                ],
+              ),),
+            )
           ],
         )
       ],
