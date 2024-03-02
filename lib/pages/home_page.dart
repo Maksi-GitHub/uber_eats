@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                         Padding(padding: const EdgeInsets.all(12),
                         child: Row(
                           children: [
-                            SvgPicture.asset("assets/images/pin_icon.svg",
+                            SvgPicture.asset("assets/icons/pin_icon.svg",
                             width: 20,
                             ),
                             const SizedBox(width: 5),
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           child: Row(
                             children: [
-                              SvgPicture.asset("assets/images/time_icon.svg",
+                              SvgPicture.asset("assets/icons/time_icon.svg",
                               width: 20,
                               ),
                               const SizedBox(width: 8),
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Expanded(child: Container(
-                    child: SvgPicture. asset("assets/images/filter_icon.svg"),
+                    child: SvgPicture. asset("assets/icons/filter_icon.svg"),
                   ),
                  )
                 ],
@@ -165,7 +165,9 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 15),
               const CustomSliderWidget(
                 items: [
-                  //"assets/images/slid_1.jpg"
+                  "assets/images/slide_1.jpg",
+                  "assets/images/slide_2.jpg",
+                  "assets/images/slide_3.jpg"
                 ]
               )
 
