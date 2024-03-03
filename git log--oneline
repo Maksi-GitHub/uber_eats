@@ -1,0 +1,29 @@
+[33mcommit d92864187399d1d4ce71720b92ec67aa81a5055a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Maksim <maks-vasilev-2017@inbox.ru>
+Date:   Sun Mar 3 12:00:14 2024 +0500
+
+    Закончена главная траница
+
+[33mcommit c5cc9102cb25cf15b6cda087884a8723fc2b6981[m
+Author: Maksim <maks-vasilev-2017@inbox.ru>
+Date:   Sat Mar 2 21:53:03 2024 +0500
+
+    Сделаны категории и начато меню
+
+[33mcommit 28a339754b7fd516f550c57d61cedae082d5a623[m
+Author: Maksim <maks-vasilev-2017@inbox.ru>
+Date:   Sat Mar 2 20:14:06 2024 +0500
+
+    Исправлено отображение картинок jpg(всё работает)
+
+[33mcommit 14a434da714f8e1a4f7f13c55e05d350d9ba1020[m
+Author: Maksim <maks-vasilev-2017@inbox.ru>
+Date:   Sat Mar 2 19:55:31 2024 +0500
+
+    Не может найти картинки jpg
+
+[33mcommit b9949262f96b477f84eb0ae1135b338404a8d50b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Maksim <maks-vasilev-2017@inbox.ru>
+Date:   Fri Mar 1 23:52:14 2024 +0500
+
+    приложение стопится из-за SvgPicturi.asset
