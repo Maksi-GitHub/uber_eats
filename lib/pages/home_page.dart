@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -10,7 +9,7 @@ import 'package:uber_eats/theme/styles.dart';
 import 'package:uber_eats/widget/custom_slider.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -47,8 +46,7 @@ class _HomePageState extends State<HomePage> {
                         });
                       },
                       child: activeMenu == index
-                      //TODO: подобрать подходящую анимацию
-                          ? Jello(
+                          ? HeadShake(
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: black,
@@ -427,7 +425,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Padding(
                                       padding: const EdgeInsets.all(5),
                                       child: Text(
-                                        exploreMenu[index]['rate'],
+                                        exploreMenu[index]['time'],
                                         style: const TextStyle(fontSize: 14),
                                       ),
                                     ),
@@ -442,7 +440,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Row(
                                         children: [
                                           Text(
-                                            exploreMenu[index]['rate_number'],
+                                            exploreMenu[index]['rate'],
                                             style: const TextStyle(fontSize: 14),
                                           ),
                                           const SizedBox(width: 3),
@@ -450,7 +448,7 @@ class _HomePageState extends State<HomePage> {
                                               color: yellowStar, size: 17),
                                           const SizedBox(width: 3),
                                           Text(
-                                            firstMenu[0]['time'],
+                                            exploreMenu[0]['rate_number'],
                                             style: const TextStyle(fontSize: 14),
                                           ),
                                         ],
@@ -573,7 +571,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Padding(
                                       padding: const EdgeInsets.all(5),
                                       child: Text(
-                                        popluarNearYou[index]['rate'],
+                                        popluarNearYou[index]['time'],
                                         style: const TextStyle(fontSize: 14),
                                       ),
                                     ),
@@ -588,7 +586,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Row(
                                         children: [
                                           Text(
-                                            popluarNearYou[index]['rate_number'],
+                                            popluarNearYou[index]['rate'],
                                             style: const TextStyle(fontSize: 14),
                                           ),
                                           const SizedBox(width: 3),
@@ -596,7 +594,7 @@ class _HomePageState extends State<HomePage> {
                                               color: yellowStar, size: 17),
                                           const SizedBox(width: 3),
                                           Text(
-                                            firstMenu[0]['time'],
+                                            popluarNearYou[0]['rate_number'],
                                             style: const TextStyle(fontSize: 14),
                                           ),
                                         ],

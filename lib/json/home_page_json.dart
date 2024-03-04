@@ -1,4 +1,5 @@
 const List menu = ["Delivery", "Pickup", "Dine-In"];
+
 const List peopleFeedback = [
   "Fast & reliable (12)",
   "Well packed (11)",
@@ -13,6 +14,7 @@ const List categories = [
   {"img": "assets/icons/deals.svg", "name": "Deals"},
   {"img": "assets/icons/discount.svg", "name": "Discount"},
 ];
+
 const List firstMenu = [
   {
     "img":
@@ -22,8 +24,9 @@ const List firstMenu = [
     "description": "Breakfast and Brunch - American - Sandwiches",
     "time": "45-55 Min",
     "delivery_fee": "\$1.49 Delivery Fee"
-  }
+  },
 ];
+
 const List exploreMenu = [
   {
     "img":
